@@ -1,8 +1,837 @@
 {
-    "Sample Page": "Sample Page",
-    "Menu Level": "Menu Level",
-    "Sub Caption": "Sub Caption",
-    "Chip": "Chip",
-    "Outlined": "Outlined",
-    "External Link": "External Link"
+
+  "homepage": {
+    "title": "Create Professional Digital Business Cards with NFC & QR – No App Required",
+    "description": "Create a smart digital card in under a minute and share it via NFC, QR, or direct link. No apps needed, with full privacy control and instant analytics.",
+    "hero": {
+      "title": "Your Digital Card, Your Smart Identity ",
+      "titleHighlight": "💼",
+      "subtitle": "Create a professional card and share it via QR, NFC or custom link – no app needed!",
+      "primaryButton": "Try Now for Free",
+      "secondaryButton": "See How It Works",
+      "imageAlt": "Interactive visual display of the digital card platform"
+    },
+    "features": {
+      "title": "Smart Platform Features",
+      "subtitle": "Discover the unlimited possibilities of your digital card",
+      "digitalCards": {
+        "title": "Smart Digital Cards",
+        "description": "Create professional cards with various designs and fully customizable with NFC and QR support"
+      },
+      "qrCustom": {
+        "title": "Fully Custom QR",
+        "description": "Unique QR code for each card with customizable colors, logo and design"
+      },
+      "landingPages": {
+        "title": "Customizable Landing Pages",
+        "description": "Create custom landing pages to showcase your services and information professionally"
+      },
+      "privacy": {
+        "title": "Complete Privacy Control",
+        "description": "Full control over who can see your card and personal information with advanced security settings"
+      },
+      "notifications": {
+        "title": "Smart Instant Notifications",
+        "description": "Get instant notifications when others interact with your card with detailed analytics"
+      },
+      "analytics": {
+        "title": "Advanced Detailed Analytics",
+        "description": "Track your card's performance and know interaction statistics, views and geographic location"
+      }
+    },
+    "howItWorks": {
+      "title": "How Does The System Work?",
+      "subtitle": "Three simple steps to get your professional digital card",
+      "step1": {
+        "title": "Create Your Smart Card",
+        "description": "Add your information, photo, and social media links in just a few minutes"
+      },
+      "step2": {
+        "title": "Share via QR or NFC",
+        "description": "Get a custom QR code or use NFC technology for instant and smart sharing"
+      },
+      "step3": {
+        "title": "Track Activity and Engagement",
+        "description": "Monitor who visited your card and interacted with it through advanced dashboard and instant analytics"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Valued Customers Say",
+      "subtitle": "Real opinions from satisfied users about our services and their outstanding experience",
+      "testimonial1": {
+        "name": "Ahmed Mohammed Al-Salem",
+        "title": "Sales Manager - Advanced Technology Company",
+        "review": "Amazing platform and very easy to use. It saved me a lot of time and effort in sharing my professional information with clients and partners."
+      },
+      "testimonial2": {
+        "name": "Fatima Ahmed Al-Zahrani",
+        "title": "Graphic Designer & Founder of Creative Studio",
+        "review": "Beautiful designs and very easy customization. I now share my work and portfolio in a more professional and distinctive way."
+      },
+      "testimonial3": {
+        "name": "Mohammed Ali Al-Ahmadi",
+        "title": "Entrepreneur & Founder of Innovation Company",
+        "review": "The statistics and analytics are very useful for tracking my professional network performance and measuring my digital card impact. Highly recommend it."
+      }
+    },
+    "pricing": {
+      "title": "Flexible Pricing Plans",
+      "subtitle": "Choose the plan that fits your needs and budget",
+      "popular": "Most Popular",
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "description": "For individuals and simple personal use",
+        "button": "Start Free Now",
+        "features": {
+          "0": "One digital card",
+          "1": "Basic QR code",
+          "2": "Social media links",
+          "3": "Simple statistics",
+          "4": "Email support"
+        }
+      },
+      "pro": {
+        "name": "Professional",
+        "price": "$29/month",
+        "description": "For professionals, business people and freelancers",
+        "button": "Subscribe Now",
+        "features": {
+          "0": "Unlimited digital cards",
+          "1": "Custom QR with colors and logo",
+          "2": "Custom landing pages",
+          "3": "Advanced detailed analytics",
+          "4": "24/7 priority support"
+        }
+      },
+      "business": {
+        "name": "Business",
+        "price": "$99/month",
+        "description": "For companies, teams and organizations",
+        "button": "Contact Us",
+        "features": {
+          "0": "Multiple team accounts",
+          "1": "Custom branding",
+          "2": "CRM integration",
+          "3": "Detailed reports and deep analytics",
+          "4": "Dedicated account manager"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Digital Journey?",
+      "subtitle": "Join thousands of professionals who use our digital cards to expand their professional network and increase their impact",
+      "primaryButton": "Create Your Card Now",
+      "secondaryButton": "Try Free for 14 Days"
+    }
+  },
+   "auth": {
+    "login": {
+      "title": "Login - Digital Business Cards Platform",
+      "description": "Sign in to access your dashboard and manage your digital cards",
+      "welcome": "Welcome Back!",
+      "subtitle": "Sign in to continue to your dashboard",
+      "email": "Email Address",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "loginButton": "Sign In",
+      "loggingIn": "Signing in...",
+      "orContinueWith": "Or continue with",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": "Invalid email or password"
+    },
+    "register": {
+      "title": "Create Account - Digital Business Cards Platform",
+      "description": "Create your new account and start building your professional digital cards",
+      "createAccount": "Create New Account",
+      "subtitle": "Join us and start your digital journey",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "passwordWeak": "Weak password",
+      "passwordMedium": "Medium password",
+      "passwordStrong": "Strong password",
+      "passwordMismatch": "Passwords do not match",
+      "acceptTerms": "I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "acceptTermsRequired": "You must accept the terms and conditions",
+      "createButton": "Create Account",
+      "creating": "Creating account...",
+      "orContinueWith": "Or continue with",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "error": "An error occurred while creating the account"
+    },
+       "forgotPassword": {
+      "title": "Forgot Password",
+      "description": "Reset your password",
+      "subtitle": "Enter your email address and we'll send you a password reset link",
+      "successMessage": "Reset link sent successfully",
+      "email": "Email Address",
+      "sendButton": "Send Reset Link",
+      "sending": "Sending...",
+      "emailSent": "Password reset link has been sent to your email",
+      "backToLogin": "Back to Login",
+      "error": "An error occurred while sending the email"
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "description": "Create a new strong password",
+      "subtitle": "Enter your new password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "passwordWeak": "Weak password",
+      "passwordMedium": "Medium password",
+      "passwordStrong": "Strong password",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooWeak": "Password is too weak, please choose a stronger password",
+      "updateButton": "Update Password",
+      "updating": "Updating...",
+      "successMessage": "Password updated successfully",
+      "invalidToken": "Invalid or expired reset link",
+      "error": "An error occurred while updating the password"
+    },
+    "verifyEmail": {
+      "title": "Verify Email",
+      "description": "Verify your email address to activate your account",
+      "checkEmail": "Check Your Email",
+      "checkEmailMessage": "We've sent a verification link to your email. Click the link to activate your account.",
+      "verifying": "Verifying...",
+      "verifyingMessage": "Please wait while we verify your email address",
+      "successTitle": "Verification Successful!",
+      "successMessage": "Your email has been verified successfully. You can now sign in to your account.",
+      "errorTitle": "Verification Failed",
+      "errorMessage": "We couldn't verify your email address. The link may have expired.",
+      "tokenExpired": "Verification link has expired or is invalid",
+      "resendEmail": "Resend Email",
+      "resending": "Sending...",
+      "resendSuccess": "Verification link resent successfully",
+      "continueToLogin": "Continue to Login",
+      "backToLogin": "Back to Login",
+      "redirectMessage": "You will be redirected to login page in 3 seconds...",
+      "verificationSuccess": "Your account has been verified successfully! You can now sign in"
+    }
+  },
+    "dashboard": {
+    "title": "Dashboard - Digital Business Cards Platform",
+    "description": "Manage your digital cards and track analytics",
+    "welcome": {
+      "title": "Welcome to Your Dashboard",
+      "subtitle": "Monitor your digital cards performance and analytics from here"
+    },
+    "stats": {
+      "totalViews": "Total Views",
+      "totalShares": "Total Shares",
+      "qrScans": "QR Scans",
+      "newContacts": "New Contacts"
+    },
+    "actions": {
+      "createCard": "Create Card",
+      "viewAnalytics": "View Analytics"
+    },
+    "cards": {
+      "title": "My Cards",
+      "add": "Add",
+      "addNew": "Add New Card",
+      "active": "Active",
+      "draft": "Draft",
+      "updated": "Last updated:",
+      "views": "views",
+      "shares": "shares",
+      "scans": "scans",
+      "viewAll": "View All Cards"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "createCard": "Create New Card",
+      "generateQR": "Generate QR Code",
+      "shareCard": "Share Card",
+      "viewAnalytics": "View Analytics",
+      "settings": "Settings",
+      "notifications": "Notifications"
+    },
+    "activity": {
+      "title": "Recent Activity",
+      "cardViewed": "Card Viewed",
+      "cardShared": "Card Shared",
+      "qrScanned": "QR Code Scanned",
+      "newContact": "New Contact"
+    }
+  },
+    "createCard": {
+    "title": "Create New Card",
+    "description": "Create your professional digital business card",
+    "backToCards": "Back to Cards",
+    "step": "Step",
+    "of": "of",
+    "livePreview": "Live Preview",
+    "saveDraft": "Save Draft",
+    "createCard": "Create Card",
+    "steps": {
+      "basicInfo": "Basic Information",
+      "contactInfo": "Contact Information",
+      "socialLinks": "Social Links",
+      "design": "Design",
+      "preview": "Preview"
+    },
+    "basicInfo": {
+      "title": "Basic Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "jobTitle": "Job Title",
+      "company": "Company",
+      "bio": "Bio",
+      "dragImage": "Drag image here or click to upload"
+    },
+    "socialLinks": {
+      "title": "Social Links",
+      "description": "Add links to your social media accounts",
+      "add": "Add",
+      "addLink": "Add Link",
+      "addFirst": "Add First Link",
+      "platform": "Platform",
+      "url": "URL",
+      "noLinks": "No Links Added",
+      "noLinksDescription": "Start by adding your social media links",
+      "quickAdd": "Quick Add Popular Platforms"
+    },
+    "preview": {
+      "title": "Card Preview",
+      "description": "Review your card before saving and make sure all information is correct",
+      "settings": "Card Settings",
+      "makePublic": "Make Card Public",
+      "allowDownload": "Allow Card Download",
+      "showQR": "Show QR Code"
+    },
+      "contactInfo": {
+      "title": "Contact Information",
+      "description": "Add your contact methods to make it easy for people to reach you",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "website": "Website",
+      "address": "Address",
+      "addressPlaceholder": "City, Country",
+      "required": "Required",
+      "emailError": "Invalid email address",
+      "phoneError": "Invalid phone number",
+      "websiteError": "Invalid website URL",
+      "preview": "Contact Information Preview",
+      "tips": {
+        "title": "Important Tips",
+        "tip1": "Make sure your email is correct to receive messages",
+        "tip2": "Add country code to phone number (+1 for US)",
+        "tip3": "Website can be added without http:// or https://"
+      }
+    },
+    "design": {
+      "title": "Design Customization",
+      "selectTemplate": "Select Template",
+      "colors": "Colors",
+      "colorPalettes": "Color Palettes",
+      "primaryColor": "Primary Color",
+      "backgroundColor": "Background Color",
+      "typography": "Typography",
+      "fontFamily": "Font Family",
+      "fontSize": "Font Size",
+      "advanced": "Advanced Settings",
+      "cardShadow": "Card Shadow",
+      "cardBorder": "Card Border",
+      "backgroundPattern": "Background Pattern",
+      "borderRadius": "Border Radius",
+      "opacity": "Opacity",
+      "resetToDefault": "Reset to Default",
+      "templates": {
+        "modern": "Modern",
+        "minimal": "Minimal",
+        "professional": "Professional",
+        "creative": "Creative",
+        "elegant": "Elegant",
+        "bold": "Bold"
+      }
+    }
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "sidebar": {
+    "sections": {
+      "dashboard": "Dashboard",
+      "cards": "Cards Management",
+      "sharing": "Sharing & Publishing",
+      "networking": "Networking",
+      "tools": "Tools & Features",
+      "account": "Account & Settings",
+      "support": "Support & Help"
+    },
+    "dashboard": {
+      "home": "Dashboard",
+      "analytics": "Analytics & Reports"
+    },
+    "cards": {
+      "myCards": "My Cards",
+      "createNew": "Create New Card",
+      "templates": "Templates & Designs"
+    },
+    "qr": {
+      "generator": "QR Code Generator"
+    },
+    "sharing": {
+      "share": "Share Card",
+      "publicView": "Public View"
+    },
+    "contacts": {
+      "contacts": "Contacts",
+      "leads": "Leads"
+    },
+    "tools": {
+      "nfc": "NFC Technology",
+      "landingPages": "Landing Pages",
+      "downloads": "Downloads"
+    },
+    "account": {
+      "profile": "Profile",
+      "subscription": "Subscription & Plans",
+      "notifications": "Notifications",
+      "settings": "General Settings",
+      "privacy": "Privacy & Security"
+    },
+    "support": {
+      "help": "Help & Support",
+      "contact": "Contact Us",
+      "feedback": "Feedback",
+      "feedbackSubtitle": "Share your feedback to improve our service"
+    },
+    "external": {
+      "website": "Our Website"
+    },
+    "chips": {
+      "new": "New",
+      "create": "Create",
+      "pro": "Pro",
+      "upgrade": "Upgrade",
+      "soon": "Soon"
+    }
+  },
+   "cards": {
+    "title": "My Cards - Digital Cards Management",
+    "description": "Manage and organize all your digital cards",
+    "myCards": "My Cards",
+    "createNew": "Create New Card",
+    "searchPlaceholder": "Search cards...",
+    "status": "Status",
+    "allStatus": "All Status",
+    "active": "Active",
+    "draft": "Draft",
+    "inactive": "Inactive",
+    "gridView": "Grid View",
+    "listView": "List View",
+    "views": "views",
+    "shares": "shares",
+    "scans": "scans",
+    "preview": "Preview",
+    "edit": "Edit",
+    "share": "Share",
+    "copyQR": "Copy QR",
+    "download": "Download",
+    "delete": "Delete",
+    "noCards": "No Cards Yet",
+    "noCardsDescription": "Start by creating your first digital card",
+    "noCardsFound": "No Cards Found",
+    "noCardsFoundDescription": "Try changing your search criteria or filters",
+    "createFirstCard": "Create First Card",
+    "deleteConfirmTitle": "Confirm Card Deletion",
+    "deleteWarning": "This action cannot be undone",
+    "deleteConfirmMessage": "Are you sure you want to delete the card '{cardName}'?",
+    "deleting": "Deleting...",
+    "shareCard": "Share Card",
+    "cardLink": "Card Link",
+    "qrCodeDescription": "Scan this code to access the card",
+    "downloadQR": "Download QR Code"
+  },
+  "qr": {
+    "title": "QR Generator - Create Custom QR Codes",
+    "description": "Generate custom QR codes for various purposes",
+    "generator": "QR Code Generator",
+    "preview": "Preview",
+    "download": "Download",
+    "share": "Share",
+    "copyUrl": "Copy URL",
+    "copied": "Copied",
+    "generating": "Generating...",
+    "enterDataToGenerate": "Enter data to generate QR code",
+    "tabs": {
+      "content": "Content",
+      "design": "Design",
+      "advanced": "Advanced"
+    },
+    "types": {
+      "url": "URL",
+      "text": "Text",
+      "email": "Email",
+      "phone": "Phone",
+      "sms": "SMS",
+      "wifi": "WiFi",
+      "location": "Location"
+    },
+    "selectType": "Select QR Code Type",
+    "enterData": "Enter Data",
+    "customizeDesign": "Customize Design",
+    "advancedOptions": "Advanced Options",
+    "advancedDescription": "Advanced options for further QR code customization",
+    "fields": {
+      "url": "URL",
+      "text": "Text",
+      "email": "Email Address",
+      "subject": "Subject",
+      "body": "Body",
+      "phone": "Phone Number",
+      "message": "Message",
+      "ssid": "Network Name",
+      "password": "Password",
+      "security": "Security Type",
+      "latitude": "Latitude",
+      "longitude": "Longitude"
+    },
+    "placeholders": {
+      "text": "Enter your text here...",
+      "subject": "Email subject",
+      "body": "Email body",
+      "message": "SMS message",
+      "ssid": "WiFi network name",
+      "password": "Network password"
+    },
+    "security": {
+      "open": "Open"
+    },
+    "size": "Size",
+    "foregroundColor": "Foreground Color",
+    "backgroundColor": "Background Color",
+    "errorCorrection": "Error Correction",
+    "margin": "Margin",
+    "addLogo": "Add Logo",
+    "logoSize": "Logo Size",
+    "resetToDefault": "Reset to Default",
+    "errorLevels": {
+      "low": "Low (7%)",
+      "medium": "Medium (15%)",
+      "quartile": "Quartile (25%)",
+      "high": "High (30%)"
+    },
+    "type": "Type",
+    "shareTitle": "Custom QR Code"
+  },
+  "analytics": {
+    "title": "Analytics & Reports",
+    "description": "Analyze your digital cards performance and track statistics",
+    "totalViews": "Total Views",
+    "totalShares": "Total Shares",
+    "qrScans": "QR Scans",
+    "newContacts": "New Contacts",
+    "card": "Card",
+    "allCards": "All Cards",
+    "period": "Period",
+    "last7Days": "Last 7 Days",
+    "last30Days": "Last 30 Days",
+    "last90Days": "Last 90 Days",
+    "lastYear": "Last Year",
+    "exportReport": "Export Report",
+    "performanceOverview": "Performance Overview",
+    "views": "views",
+    "shares": "shares",
+    "scans": "scans",
+    "chartPlaceholder": "Chart will be displayed here",
+    "topCards": "Top Performing Cards",
+    "deviceBreakdown": "Device Breakdown",
+    "mobile": "Mobile",
+    "desktop": "Desktop",
+    "tablet": "Tablet",
+    "topLocations": "Top Locations",
+    "recentActivity": "Recent Activity",
+    "filter": "Filter",
+    "activity": {
+      "cardViewed": "Card Viewed",
+      "cardShared": "Card Shared",
+      "qrScanned": "QR Code Scanned",
+      "contactAdded": "Contact Added"
+    }
+  },
+  "editCard": {
+    "title": "Edit Card",
+    "description": "Edit and customize your digital card",
+    "editCard": "Edit Card",
+    "loading": "Loading card...",
+    "loadingDescription": "Please wait while we load your card data",
+    "backToCards": "Back to Cards",
+    "livePreview": "Live Preview",
+    "lastSaved": "Last saved",
+    "unsavedChanges": "Unsaved changes",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "preview": "Preview",
+    "copyLink": "Copy Link",
+    "discardChanges": "Discard Changes",
+    "deleteCard": "Delete Card",
+    "tabs": {
+      "basicInfo": "Basic Information",
+      "contact": "Contact Information",
+      "social": "Social Links",
+      "design": "Design",
+      "preview": "Preview"
+    },
+    "finalPreview": "Final Preview",
+    "previewDescription": "Review your final card before publishing",
+    "cardSettings": "Card Settings",
+    "makePublic": "Make Card Public",
+    "allowDownload": "Allow Download",
+    "showQR": "Show QR Code",
+    "cardStats": "Card Statistics",
+    "totalViews": "Total Views",
+    "totalShares": "Total Shares",
+    "created": "Created",
+    "lastUpdated": "Last Updated",
+    "deleteConfirmTitle": "Confirm Card Deletion",
+    "deleteWarning": "This action cannot be undone",
+    "deleteConfirmMessage": "Are you sure you want to delete the card '{cardName}'?",
+    "confirmDelete": "Confirm Delete",
+    "discardTitle": "Discard Changes",
+    "discardMessage": "Are you sure you want to discard all unsaved changes?",
+    "confirmDiscard": "Confirm Discard",
+    "success": {
+      "saved": "Changes saved successfully",
+      "discarded": "Changes discarded",
+      "deleted": "Card deleted successfully",
+      "linkCopied": "Link copied"
+    },
+    "errors": {
+      "loadFailed": "Failed to load card",
+      "saveFailed": "Failed to save changes",
+      "deleteFailed": "Failed to delete card",
+      "notFound": "Card not found",
+      "notFoundDescription": "The card you're looking for doesn't exist or has been deleted"
+    }
+  },
+  "cardPreview": {
+    "title": "Card Preview",
+    "description": "Comprehensive preview of your digital card",
+    "preview": "Card Preview",
+    "loading": "Loading preview...",
+    "notFound": "Card not found",
+    "edit": "Edit",
+    "share": "Share",
+    "download": "Download",
+    "desktopView": "Desktop View",
+    "mobileView": "Mobile View",
+    "fullscreen": "Fullscreen",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "stats": "Statistics",
+    "views": "Views",
+    "shares": "Shares",
+    "qrScans": "QR Scans",
+    "quickActions": "Quick Actions",
+    "copyLink": "Copy Link",
+    "copied": "Copied",
+    "showQR": "Show QR Code",
+    "downloadCard": "Download Card",
+    "contactInfo": "Contact Information",
+    "socialLinks": "Social Links",
+    "shareCard": "Share Card",
+    "cardLink": "Card Link",
+    "qrCode": "QR Code",
+    "qrDescription": "Scan this code to access the card",
+    "downloadQR": "Download QR Code"
+  },
+  "basicInfo": {
+    "title": "Basic Information",
+    "description": "Add your personal and professional basic information",
+    "profilePhoto": "Profile Photo",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "jobTitle": "Job Title", 
+    "company": "Company or Organization",
+    "bio": "Bio",
+    "dragImage": "Drag image here or click to upload",
+    "imageFormats": "PNG, JPG, GIF up to 5MB",
+    "imageRecommendation": "We recommend using a square image with 400x400 pixels resolution for best results",
+    "required": "Required",
+    "jobTitleHelper": "Example: App Developer, Sales Manager, Graphic Designer",
+    "companyHelper": "Name of the company or organization you work for",
+    "bioHelper": "Brief description about yourself and your experience",
+    "preview": "Basic Information Preview",
+    "errors": {
+      "nameShort": "Name must be at least 2 characters",
+      "jobTitleShort": "Job title must be at least 3 characters", 
+      "companyShort": "Company name must be at least 2 characters",
+      "bioLong": "Bio must not exceed 200 characters"
+    },
+    "tips": {
+      "title": "Important Tips",
+      "tip1": "Use a clear and professional photo to make a good impression",
+      "tip2": "Write a clear and specific job title",
+      "tip3": "Bio should be brief and useful",
+      "tip4": "Make sure all information is correct before saving"
+    }
+  },
+   "publicCard": {
+    "loading": "Loading card...",
+    "notFound": "Card not found",
+    "notFoundDescription": "The card you're looking for doesn't exist or is not publicly available",
+    "views": "views",
+    "likes": "likes",
+    "like": "Like",
+    "unlike": "Unlike",
+    "share": "Share",
+    "showQR": "Show QR",
+    "contactInfo": "Contact Information",
+    "socialLinks": "Social Links",
+    "saveContact": "Save Contact",
+    "saveContactDescription": "Save contact information to your phone",
+    "downloadContact": "Download Contact",
+    "qrCode": "QR Code",
+    "qrDescription": "Scan this code to save contact information",
+    "downloadQR": "Download QR",
+    "shareCard": "Share Card",
+    "copyLink": "Copy Link",
+    "copied": "Copied"
+  },
+  "templates": {
+    "title": "Card Templates",
+    "description": "Choose from a variety of professional templates",
+    "createCustom": "Create Custom Template",
+    "searchPlaceholder": "Search templates...",
+    "category": "Category",
+    "templatesFound": "templates found",
+    "premium": "Premium",
+    "preview": "Preview",
+    "downloads": "downloads",
+    "features": "Features",
+    "use": "Use",
+    "useTemplate": "Use Template",
+    "noTemplatesFound": "No templates found",
+    "noTemplatesDescription": "Try changing your search criteria or filters",
+    "clearFilters": "Clear Filters",
+    "categories": {
+      "all": "All Categories",
+      "business": "Business",
+      "creative": "Creative",
+      "minimal": "Minimal",
+      "technology": "Technology",
+      "elegant": "Elegant",
+      "bold": "Bold"
+    }
+  },
+   "comingSoon": {
+    "title": "Coming Soon",
+    "description": "This feature is under development",
+    "message": "We're working hard to bring you this feature. It will be available soon with exciting updates!",
+    "goToDashboard": "Go to Dashboard"
+  },
+   "header": {
+        "home": "Home",
+    "features": "Features", 
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "support": "Support",
+    "login": "Login",
+    "signup": "Get Started",
+    "profile": {
+      "userProfile": "User Profile",
+      "myProfile": "My Profile",
+      "accountSettings": "Account Settings",
+      "settings": "Settings",
+      "preferences": "Preferences",
+      "notifications": "Notifications",
+      "alerts": "Alerts",
+      "subscription": "Subscription",
+      "billing": "Billing",
+      "help": "Help",
+      "support": "Support",
+      "logout": "Logout",
+      "upgrade": "Upgrade"
+    }
+  },
+  "profile": {
+    "title": "Profile - Manage Your Personal Information",
+    "description": "Manage and update your personal information and settings",
+    "myProfile": "My Profile",
+    "editProfile": "Edit Profile",
+    "personalInformation": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "website": "Website",
+    "bio": "Bio",
+    "memberSince": "Member since",
+    "statistics": "Statistics",
+    "privacySettings": "Privacy Settings",
+    "emailNotifications": "Email Notifications",
+    "pushNotifications": "Push Notifications",
+    "profileVisibility": "Profile Visibility",
+    "twoFactorAuth": "Two-Factor Authentication",
+    "accountActions": "Account Actions",
+    "changePassword": "Change Password",
+    "exportData": "Export Data",
+    "deleteAccount": "Delete Account",
+    "dataExportInfo": "You can export all your data at any time",
+    "stats": {
+      "cardsCreated": "Cards Created",
+      "totalViews": "Total Views",
+      "profileViews": "Profile Views",
+      "accountLevel": "Account Level"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage application settings and preferences",
+    "saveSettings": "Save Settings",
+    "resetToDefault": "Reset to Default",
+    "appearance": {
+      "title": "Appearance",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "language": "Language",
+      "layout": "Layout",
+      "boxed": "Boxed",
+      "full": "Full",
+      "borderRadius": "Border Radius",
+      "cardShadow": "Card Shadows"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "email": "Email",
+      "emailDesc": "Receive notifications via email",
+      "push": "Push Notifications",
+      "pushDesc": "Receive notifications on device",
+      "sms": "SMS",
+      "smsDesc": "Receive notifications via SMS",
+      "whatsapp": "WhatsApp",
+      "whatsappDesc": "Receive notifications via WhatsApp"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "profileVisibility": "Profile Visibility",
+      "public": "Public",
+      "private": "Private",
+      "contactsOnly": "Contacts Only",
+      "showEmail": "Show Email",
+      "showPhone": "Show Phone",
+      "allowDownload": "Allow Card Download",
+      "twoFactorAuth": "Two-Factor Authentication",
+      "recommended": "Recommended",
+      "twoFactorDesc": "Add an extra layer of security to your account"
+    }
+  }
 }

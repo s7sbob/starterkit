@@ -1,12 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// src/layouts/full/vertical/sidebar/NavCollapse/index.tsx
 import React from 'react';
-
 import { useState } from 'react';
 import { useSelector } from 'src/store/Store';
 import { useLocation } from 'react-router';
-
-// mui imports
 import {
   ListItemIcon,
   ListItemButton,
@@ -15,15 +11,8 @@ import {
   ListItemText,
   useTheme,
 } from '@mui/material';
-
-// custom imports
 import NavItem from '../NavItem';
-
-// plugins
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
-import { useTranslation } from 'react-i18next';
 import { AppState } from 'src/store/Store';
 
 type NavGroupProps = {
@@ -33,6 +22,7 @@ type NavGroupProps = {
   title?: string;
   icon?: any;
   href?: any;
+  children?: NavGroupProps[];
 };
 
 interface NavCollapseProps {
@@ -42,23 +32,23 @@ interface NavCollapseProps {
   pathDirect: any;
   hideMenu: any;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
+  t: (key: string) => string;
 }
 
-// FC Component For Dropdown Menu
 const NavCollapse = ({
   menu,
   level,
   pathWithoutLastPart,
   pathDirect,
   hideMenu,
-  onClick
+  onClick,
+  t
 }: NavCollapseProps) => {
   const customizer = useSelector((state: AppState) => state.customizer);
   const Icon = menu?.icon;
   const theme = useTheme();
   const { pathname } = useLocation();
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const menuIcon =
     level > 1 ? <Icon stroke={1.5} size="1rem" /> : <Icon stroke={1.5} size="1.3rem" />;
 
@@ -109,6 +99,7 @@ const NavCollapse = ({
           pathDirect={pathDirect}
           hideMenu={hideMenu}
           onClick={onClick}
+          t={t}
         />
       );
     } else {
@@ -120,6 +111,7 @@ const NavCollapse = ({
           pathDirect={pathDirect}
           hideMenu={hideMenu}
           onClick={onClick}
+          t={t}
         />
       );
     }
@@ -141,8 +133,14 @@ const NavCollapse = ({
         >
           {menuIcon}
         </ListItemIcon>
-        <ListItemText color="inherit">{hideMenu ? '' : <>{t(`${menu.title}`)}</>}</ListItemText>
-        {!open ? <IconChevronDown size="1rem" /> : <IconChevronUp size="1rem" />}
+        <ListItemText color="inherit">
+          {hideMenu ? '' : <>{t(menu.title ?? '')}</>}
+        </ListItemText>
+        {!hideMenu && (
+          <>
+            {!open ? <IconChevronDown size="1rem" /> : <IconChevronUp size="1rem" />}
+          </>
+        )}
       </ListItemStyled>
       <Collapse in={open} timeout="auto" unmountOnExit>
         {submenus}

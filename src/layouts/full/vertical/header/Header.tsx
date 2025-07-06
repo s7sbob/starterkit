@@ -1,17 +1,14 @@
+// src/layouts/full/vertical/header/Header.tsx
 import { IconButton, Box, AppBar, useMediaQuery, Toolbar, styled, Stack } from '@mui/material';
-
 import { useSelector, useDispatch } from 'src/store/Store';
 import {
   toggleSidebar,
   toggleMobileSidebar,
   setDarkMode,
 } from 'src/store/customizer/CustomizerSlice';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { IconMenu2, IconMoon, IconSun } from '@tabler/icons-react';
 import Notifications from './Notification';
 import Profile from './Profile';
-import Cart from './Cart';
 import Search from './Search';
 import Language from './Language';
 import { AppState } from 'src/store/Store';
@@ -35,9 +32,12 @@ const Header = () => {
       minHeight: customizer.TopbarHeight,
     },
   }));
+  
   const ToolbarStyled = styled(Toolbar)(({ theme }) => ({
     width: '100%',
     color: theme.palette.text.secondary,
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
   }));
 
   return (
@@ -50,6 +50,11 @@ const Header = () => {
           color="inherit"
           aria-label="menu"
           onClick={lgUp ? () => dispatch(toggleSidebar()) : () => dispatch(toggleMobileSidebar())}
+          sx={{
+            '&:hover': {
+              backgroundColor: 'primary.light',
+            }
+          }}
         >
           <IconMenu2 size="20" />
         </IconButton>
@@ -58,6 +63,7 @@ const Header = () => {
         {/* Search Dropdown */}
         {/* ------------------------------------------- */}
         <Search />
+        
         {lgUp ? (
           <>
             <Navigation />
@@ -65,17 +71,22 @@ const Header = () => {
         ) : null}
 
         <Box flexGrow={1} />
+        
         <Stack spacing={1} direction="row" alignItems="center">
           <Language />
+          
           {/* ------------------------------------------- */}
-          {/* Ecommerce Dropdown */}
+          {/* Dark/Light Mode Toggle */}
           {/* ------------------------------------------- */}
-          <Cart />
-          {/* ------------------------------------------- */}
-          {/* End Ecommerce Dropdown */}
-          {/* ------------------------------------------- */}
-
-          <IconButton size="large" color="inherit">
+          <IconButton 
+            size="large" 
+            color="inherit"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'primary.light',
+              }
+            }}
+          >
             {customizer.activeMode === 'light' ? (
               <IconMoon size="21" stroke="1.5" onClick={() => dispatch(setDarkMode('dark'))} />
             ) : (
@@ -84,10 +95,12 @@ const Header = () => {
           </IconButton>
 
           <Notifications />
+          
           {/* ------------------------------------------- */}
           {/* Toggle Right Sidebar for mobile */}
           {/* ------------------------------------------- */}
           {lgDown ? <MobileRightSidebar /> : null}
+          
           <Profile />
         </Stack>
       </ToolbarStyled>

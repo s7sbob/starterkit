@@ -1,3 +1,4 @@
+// src/layouts/full/vertical/sidebar/Sidebar.tsx
 import { useMediaQuery, Box, Drawer, useTheme } from '@mui/material';
 import SidebarItems from './SidebarItems';
 import Logo from '../../shared/logo/Logo';
@@ -38,9 +39,6 @@ const Sidebar = () => {
           }),
         }}
       >
-        {/* ------------------------------------------- */}
-        {/* Sidebar for desktop */}
-        {/* ------------------------------------------- */}
         <Drawer
           anchor="left"
           open
@@ -54,36 +52,73 @@ const Sidebar = () => {
               }),
               width: toggleWidth,
               boxSizing: 'border-box',
+              borderRight: `1px solid ${theme.palette.divider}`,
+              height: '100vh', // طول الصفحة بالكامل
+              overflow: 'hidden', // منع الـ scroll للـ sidebar نفسه
             },
           }}
         >
-          {/* ------------------------------------------- */}
-          {/* Sidebar Box */}
-          {/* ------------------------------------------- */}
           <Box
             sx={{
-              height: '100%',
+              height: '100vh', // طول الصفحة بالكامل
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden', // منع الـ scroll
             }}
           >
-            {/* ------------------------------------------- */}
-            {/* Logo */}
-            {/* ------------------------------------------- */}
-            <Box px={3}>
+            {/* Logo Section - ثابت في الأعلى */}
+            <Box 
+              sx={{ 
+                px: 3, 
+                py: 2,
+                flexShrink: 0, // لا يتقلص
+                borderBottom: `1px solid ${theme.palette.divider}`,
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
               <Logo />
             </Box>
-            <Scrollbar sx={{ height: 'calc(100% - 190px)' }}>
-              {/* ------------------------------------------- */}
-              {/* Sidebar Items */}
-              {/* ------------------------------------------- */}
-              <SidebarItems />
-            </Scrollbar>
-            <Profile />
+            
+            {/* Menu Items Section - قابل للتمرير */}
+            <Box
+              sx={{
+                flex: 1, // يأخذ المساحة المتبقية
+                overflow: 'hidden', // منع الـ overflow
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <Scrollbar 
+                sx={{ 
+                  flex: 1,
+                  '& .simplebar-content': {
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }
+                }}
+              >
+                <SidebarItems />
+              </Scrollbar>
+            </Box>
+            
+            {/* Profile Section - ثابت في الأسفل */}
+            <Box
+              sx={{
+                flexShrink: 0, // لا يتقلص
+                borderTop: `1px solid ${theme.palette.divider}`,
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
+              <Profile />
+            </Box>
           </Box>
         </Drawer>
       </Box>
     );
   }
 
+  // Mobile Sidebar
   return (
     <Drawer
       anchor="left"
@@ -93,27 +128,68 @@ const Sidebar = () => {
       PaperProps={{
         sx: {
           width: customizer.SidebarWidth,
-
-          // backgroundColor:
-          //   customizer.activeMode === 'dark'
-          //     ? customizer.darkBackground900
-          //     : customizer.activeSidebarBg,
-          // color: customizer.activeSidebarBg === '#ffffff' ? '' : 'white',
           border: '0 !important',
           boxShadow: (theme) => theme.shadows[8],
+          height: '100vh', // طول الصفحة بالكامل للموبايل
+          overflow: 'hidden', // منع الـ scroll للـ sidebar نفسه
         },
       }}
     >
-      {/* ------------------------------------------- */}
-      {/* Logo */}
-      {/* ------------------------------------------- */}
-      <Box px={2}>
-        <Logo />
+      <Box
+        sx={{
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Logo Section - Mobile */}
+        <Box 
+          sx={{ 
+            px: 2, 
+            py: 2,
+            flexShrink: 0,
+            borderBottom: `1px solid ${theme.palette.divider}`,
+            backgroundColor: theme.palette.background.paper,
+          }}
+        >
+          <Logo />
+        </Box>
+        
+        {/* Menu Items Section - Mobile */}
+        <Box
+          sx={{
+            flex: 1,
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <Scrollbar 
+            sx={{ 
+              flex: 1,
+              '& .simplebar-content': {
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+              }
+            }}
+          >
+            <SidebarItems />
+          </Scrollbar>
+        </Box>
+        
+        {/* Profile Section - Mobile */}
+        <Box
+          sx={{
+            flexShrink: 0,
+            borderTop: `1px solid ${theme.palette.divider}`,
+            backgroundColor: theme.palette.background.paper,
+          }}
+        >
+          <Profile />
+        </Box>
       </Box>
-      {/* ------------------------------------------- */}
-      {/* Sidebar For Mobile */}
-      {/* ------------------------------------------- */}
-      <SidebarItems />
     </Drawer>
   );
 };

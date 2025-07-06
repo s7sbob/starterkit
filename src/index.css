@@ -67,3 +67,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+html[dir="rtl"] {
+  font-family: 'Cairo', 'Roboto', sans-serif;
+}
+
+html[dir="ltr"] {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* تحسينات إضافية للـ RTL */
+html[dir="rtl"] .MuiDrawer-paper {
+  right: 0;
+  left: auto;
+}
+
+html[dir="ltr"] .MuiDrawer-paper {
+  left: 0;
+  right: auto;
+}

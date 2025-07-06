@@ -1,9 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// src/layouts/full/vertical/sidebar/NavItem/index.tsx
 import React from 'react';
 import { NavLink } from 'react-router';
-
-// mui imports
 import {
   ListItemIcon,
   List,
@@ -15,7 +12,6 @@ import {
   ListItemButton,
 } from '@mui/material';
 import { useSelector } from 'src/store/Store';
-import { useTranslation } from 'react-i18next';
 import { AppState } from 'src/store/Store';
 
 type NavGroup = {
@@ -32,6 +28,8 @@ type NavGroup = {
   variant?: string | any;
   external?: boolean;
   level?: number;
+  disabled?: boolean;
+  subtitle?: string;
   onClick?: React.MouseEvent<HTMLButtonElement, MouseEvent>;
 };
 
@@ -41,13 +39,13 @@ interface ItemType {
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
   level?: number | any;
   pathDirect: string;
+  t: (key: string) => string;
 }
 
-const NavItem = ({ item, level, pathDirect, hideMenu, onClick }: ItemType) => {
+const NavItem = ({ item, level, pathDirect, hideMenu, onClick, t }: ItemType) => {
   const customizer = useSelector((state: AppState) => state.customizer);
   const Icon = item?.icon;
   const theme = useTheme();
-  const { t } = useTranslation();
   const itemIcon =
     level > 1 ? <Icon stroke={1.5} size="1rem" /> : <Icon stroke={1.5} size="1.3rem" />;
 
@@ -109,12 +107,14 @@ const NavItem = ({ item, level, pathDirect, hideMenu, onClick }: ItemType) => {
           {itemIcon}
         </ListItemIcon>
         <ListItemText>
-          {hideMenu ? '' : <>{t(`${item?.title}`)}</>}
-          <br />
-          {item?.subtitle ? (
-            <Typography variant="caption">{hideMenu ? '' : item?.subtitle}</Typography>
-          ) : (
-            ''
+          {hideMenu ? '' : <>{t(item?.title ?? '')}</>}
+          {item?.subtitle && !hideMenu && (
+            <>
+              <br />
+              <Typography variant="caption" sx={{ fontSize: '11px' }}>
+                {t(item?.subtitle ?? '')}
+              </Typography>
+            </>
           )}
         </ListItemText>
 
@@ -123,7 +123,7 @@ const NavItem = ({ item, level, pathDirect, hideMenu, onClick }: ItemType) => {
             color={item?.chipColor}
             variant={item?.variant ? item?.variant : 'filled'}
             size="small"
-            label={item?.chip}
+            label={item?.chip?.startsWith('sidebar.') ? t(item?.chip) : item?.chip}
           />
         )}
       </ListItemStyled>

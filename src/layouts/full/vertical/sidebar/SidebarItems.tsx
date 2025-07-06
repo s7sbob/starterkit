@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import React from 'react';
+// src/layouts/full/vertical/sidebar/SidebarItems.tsx
 import Menuitems from './MenuItems';
 import { useLocation } from 'react-router';
 import { Box, List, useMediaQuery } from '@mui/material';
@@ -9,6 +7,7 @@ import { toggleMobileSidebar } from 'src/store/customizer/CustomizerSlice';
 import NavItem from './NavItem';
 import NavCollapse from './NavCollapse';
 import NavGroup from './NavGroup/NavGroup';
+import { useTranslation } from 'react-i18next';
 import { AppState } from 'src/store/Store';
 
 const SidebarItems = () => {
@@ -19,6 +18,7 @@ const SidebarItems = () => {
   const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up('lg'));
   const hideMenu: any = lgUp ? customizer.isCollapse && !customizer.isSidebarHover : '';
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   return (
     <Box sx={{ px: 3 }}>
@@ -26,7 +26,7 @@ const SidebarItems = () => {
         {Menuitems.map((item) => {
           // {/********SubHeader**********/}
           if (item.subheader) {
-            return <NavGroup item={item} hideMenu={hideMenu} key={item.subheader} />;
+            return <NavGroup item={item} hideMenu={hideMenu} key={item.subheader} t={t} />;
 
             // {/********If Sub Menu**********/}
             /* eslint no-else-return: "off" */
@@ -40,14 +40,21 @@ const SidebarItems = () => {
                 level={1}
                 key={item.id}
                 onClick={() => dispatch(toggleMobileSidebar())}
+                t={t}
               />
             );
 
             // {/********If Sub No Menu**********/}
           } else {
             return (
-              <NavItem item={item} key={item.id} pathDirect={pathDirect} hideMenu={hideMenu}
-              onClick={() => dispatch(toggleMobileSidebar())} />
+              <NavItem 
+                item={item} 
+                key={item.id} 
+                pathDirect={pathDirect} 
+                hideMenu={hideMenu}
+                onClick={() => dispatch(toggleMobileSidebar())} 
+                t={t}
+              />
             );
           }
         })}
@@ -55,4 +62,5 @@ const SidebarItems = () => {
     </Box>
   );
 };
+
 export default SidebarItems;
